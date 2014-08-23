@@ -1,4 +1,4 @@
-<?php namespace Addon\Tag\Request;
+<?php namespace Streams\Addon\Tag\Request;
 
 use Streams\Core\Addon\TagAbstract;
 
