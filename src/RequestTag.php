@@ -1,8 +1,8 @@
-<?php namespace Anomaly\Streams\Tag\Request;
+<?php namespace Anomaly\Streams\Addon\Tag\Request;
 
-use Streams\Core\Addon\TagAbstract;
+use Anomaly\Streams\Platform\Addon\Tag\TagAddon;
 
-class RequestTag extends TagAbstract
+class RequestTag extends TagAddon
 {
     /**
      * Return a segment of the request.
