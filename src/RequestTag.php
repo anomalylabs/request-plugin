@@ -4,6 +4,8 @@ use Anomaly\Streams\Platform\Addon\Tag\TagAddon;
 
 class RequestTag extends TagAddon
 {
+    protected $slug = 'request';
+
     /**
      * Return a segment of the request.
      *
@@ -66,19 +68,12 @@ class RequestTag extends TagAddon
         return \Request::path();
     }
 
-    /**
-     * Magically map segments.
-     *
-     * @param $method
-     * @param $arguments
-     * @return null|string
-     */
-    public function __call($method, array $arguments = [])
+    public function __call($key, array $params = [])
     {
-        if (substr($method, 0, 8) == 'segment_') {
-            return $this->segment(substr($method, 8));
+        if (substr($key, 0, 8) == 'segment_') {
+            return $this->segment(substr($key, 8));
         }
 
-        return parent::__call($method, $arguments);
+        return parent::__call($key, $params);
     }
 }
