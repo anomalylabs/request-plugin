@@ -73,7 +73,7 @@ class RequestTag extends TagAddon
      * @param $arguments
      * @return null|string
      */
-    public function __call($method, $arguments)
+    public function __call($method, array $arguments = [])
     {
         if (substr($method, 0, 8) == 'segment_') {
             return $this->segment(substr($method, 8));
