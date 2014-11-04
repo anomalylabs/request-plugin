@@ -1,6 +1,6 @@
 <?php namespace Anomaly\Streams\Addon\Tag\Request;
 
-use Anomaly\Streams\Platform\Addon\Tag\TagAddon;
+use Anomaly\Streams\Platform\Addon\Tag\Tag;
 
 /**
  * Class RequestTag
@@ -10,7 +10,7 @@ use Anomaly\Streams\Platform\Addon\Tag\TagAddon;
  * @author        Ryan Thompson <ryan@anomaly.is>
  * @package       Anomaly\Streams\Addon\Tag\Request
  */
-class RequestTag extends TagAddon
+class RequestTag extends Tag
 {
 
     /**
