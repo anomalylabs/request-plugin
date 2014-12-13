@@ -21,7 +21,7 @@ class RequestTag extends Tag
      */
     public function segment($segment = 1)
     {
-        return app('request')->segment($this->getAttribute('segment', $segment));
+        return app('request')->segment($this->attributes->getValue('segment', $segment));
     }
 
     /**
