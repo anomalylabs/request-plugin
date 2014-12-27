@@ -1,6 +1,6 @@
-<?php namespace Anomaly\Streams\Addon\Tag\Request;
+<?php namespace Anomaly\Streams\Addon\Plugin\Request;
 
-use Anomaly\Streams\Platform\Addon\Tag\Plugin;
+use Anomaly\Streams\Platform\Addon\Plugin\Plugin;
 use Illuminate\Http\Request;
 use Twig_SimpleFunction;
 
