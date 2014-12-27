@@ -2,5 +2,5 @@
 
 return [
     'name'        => 'Request',
-    'description' => 'Request tag.',
+    'description' => 'Request plugin.',
 ];

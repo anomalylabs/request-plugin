@@ -1,7 +1,7 @@
 {
-    "name": "anomaly/request-tag",
+    "name": "anomaly/request-plugin",
     "type": "streams-addon",
-    "description": "Request tag.",
+    "description": "Request plugin.",
     "authors": [
         {
             "name": "AnomalyLabs",
