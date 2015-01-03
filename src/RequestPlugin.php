@@ -1,4 +1,4 @@
-<?php namespace Anomaly\Streams\Addon\Plugin\Request;
+<?php namespace Anomaly\RequestPlugin;
 
 use Anomaly\Streams\Platform\Addon\Plugin\Plugin;
 use Illuminate\Http\Request;
