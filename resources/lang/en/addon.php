@@ -2,5 +2,5 @@
 
 return [
     'name'        => 'Request',
-    'description' => 'Request plugin.',
+    'description' => 'A plugin that provides interactions with Illuminate\\Http\\Request.',
 ];

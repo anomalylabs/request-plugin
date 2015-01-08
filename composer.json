@@ -1,7 +1,7 @@
 {
     "name": "anomaly/request-plugin",
     "type": "streams-addon",
-    "description": "A plugin that provides numerous helpful PHP interactions for Twig.",
+    "description": "A plugin that provides interactions with Illuminate\\Http\\Request.",
     "keywords": ["streams-addon", "request", "pyrocms", "laravel"],
     "homepage": "http://anomaly.is/",
     "version": "1.0.0-alpha",
@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Anomaly\\HelperPlugin\\": "src/"
+            "Anomaly\\RequestPlugin\\": "src/"
         }
     },
     "extra": {

@@ -16,6 +16,40 @@ class RequestPlugin extends Plugin
 {
 
     /**
+     * Supported functions.
+     *
+     * @var array
+     */
+    protected $functions = [
+        'ip',
+        'is',
+        'all',
+        'url',
+        'has',
+        'ajax',
+        'json',
+        'root',
+        'path',
+        'only',
+        'user',
+        'input',
+        'query',
+        'route',
+        'cookie',
+        'except',
+        'exists',
+        'header',
+        'method',
+        'secure',
+        'server',
+        'segment',
+        'segments',
+        'full_url',
+        'has_cookie',
+        'decoded_path',
+    ];
+
+    /**
      * The request object from Laravel.
      *
      * @var \Illuminate\Http\Request
@@ -23,7 +57,7 @@ class RequestPlugin extends Plugin
     protected $request;
 
     /**
-     * Create a new input extension
+     * Create a new RequestPlugin instance.
      *
      * @param \Illuminate\Http\Request
      */
@@ -33,14 +67,17 @@ class RequestPlugin extends Plugin
     }
 
     /**
-     * Returns a list of functions to add to the existing list.
+     * Return plugin functions.
      *
      * @return array An array of functions
      */
     public function getFunctions()
     {
-        return [
-            new Twig_SimpleFunction('segment', [$this->request, 'segment']),
-        ];
+        return array_map(
+            function ($function) {
+                return new \Twig_SimpleFunction("request_{$function}", [$this->request, snake_case($function)]);
+            },
+            $this->functions
+        );
     }
 }
