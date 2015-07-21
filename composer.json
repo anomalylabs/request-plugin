@@ -1,15 +1,14 @@
 {
     "name": "anomaly/request-plugin",
     "type": "streams-addon",
-    "description": "A plugin that provides interactions with Illuminate\\Http\\Request.",
+    "description": "A Streams Platform plugin that provides Laravel's request class.",
     "keywords": [
-        "streams-addon",
-        "request",
-        "pyrocms",
-        "laravel"
+        "streams plugin",
+        "streams addon",
+        "plugin"
     ],
     "homepage": "http://anomaly.is/",
-    "version": "1.0.0-alpha",
+    "version": "1.0.0",
     "license": "MIT",
     "authors": [
         {
@@ -29,8 +28,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-1.0/master": "1.0.x-dev"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }

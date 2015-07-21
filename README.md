@@ -1,3 +1,3 @@
-#Helpers Plugin
+# Request Plugin
 
-A plugin that provides numerous helpful PHP interactions for Twig.
+A Streams Platform plugin that provides Laravel's request class.
