@@ -74,11 +74,21 @@ class RequestPlugin extends Plugin
      */
     public function getFunctions()
     {
-        return array_map(
-            function ($function) {
-                return new \Twig_SimpleFunction("request_{$function}", [$this->request, snake_case($function)]);
-            },
-            $this->functions
-        );
+        return [
+            new Twig_SimpleFunction(
+                'request_*',
+                function ($name) {
+
+                    $arguments = array_slice(func_get_args(), 1);
+
+                    $name = camel_case($name);
+
+                    return call_user_func_array([$this->request, $name], $arguments);
+                },
+                [
+                    'is_safe' => ['html']
+                ]
+            )
+        ];
     }
 }
