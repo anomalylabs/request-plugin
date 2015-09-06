@@ -24,6 +24,7 @@ class RequestPlugin extends Plugin
         'ip',
         'is',
         'all',
+        'get',
         'url',
         'has',
         'ajax',
