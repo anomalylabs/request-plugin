@@ -1,3 +1,3 @@
 # Request Plugin
 
-A Streams Platform plugin that provides Laravel's request class.
+A Streams Platform plugin that provides API access to Laravel's Request class.

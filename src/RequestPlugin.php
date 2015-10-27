@@ -16,41 +16,6 @@ class RequestPlugin extends Plugin
 {
 
     /**
-     * Supported functions.
-     *
-     * @var array
-     */
-    protected $functions = [
-        'ip',
-        'is',
-        'all',
-        'get',
-        'url',
-        'has',
-        'ajax',
-        'json',
-        'root',
-        'path',
-        'only',
-        'user',
-        'input',
-        'query',
-        'route',
-        'cookie',
-        'except',
-        'exists',
-        'header',
-        'method',
-        'secure',
-        'server',
-        'segment',
-        'segments',
-        'full_url',
-        'has_cookie',
-        'decoded_path',
-    ];
-
-    /**
      * The request object from Laravel.
      *
      * @var \Illuminate\Http\Request
@@ -81,13 +46,8 @@ class RequestPlugin extends Plugin
 
                     $arguments = array_slice(func_get_args(), 1);
 
-                    $name = camel_case($name);
-
-                    return call_user_func_array([$this->request, $name], $arguments);
-                },
-                [
-                    'is_safe' => ['html']
-                ]
+                    return call_user_func_array([$this->request, camel_case($name)], $arguments);
+                }
             )
         ];
     }

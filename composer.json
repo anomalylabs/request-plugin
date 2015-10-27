@@ -1,11 +1,11 @@
 {
     "name": "anomaly/request-plugin",
     "type": "streams-addon",
-    "description": "A Streams Platform plugin that provides Laravel's request class.",
+    "description": "A Streams Platform plugin that provides API access to Laravel's Request class.",
     "keywords": [
-        "streams plugin",
-        "streams addon",
-        "plugin"
+        "streams",
+        "plugin",
+        "request"
     ],
     "homepage": "http://anomaly.is/",
     "license": "MIT",
@@ -23,11 +23,6 @@
     "autoload": {
         "psr-4": {
             "Anomaly\\RequestPlugin\\": "src/"
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-1.0/master": "1.0.x-dev"
         }
     }
 }
