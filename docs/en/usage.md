@@ -1,8 +1,8 @@
 # Usage
 
-To use the request object simply call any of the public methods from the request class prefixed with `request_`.
+To use the request object simply call any of the public methods from the request class prefixed with `request_*`.
 
-For documentation on all of the available methods in the Request class please see the [Laravel Documentation](https://laravel.com/docs/5.1/requests).
+For documentation on the request class and what methods are available check out the [Laravel Documentation](https://laravel.com/docs/5.1/requests).
 
     {% verbatim %}{{ request_url(1) }}{% endverbatim %} // http://pyrocms.com/documentation/request-plugin/usage
 
